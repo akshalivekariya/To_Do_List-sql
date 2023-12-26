@@ -1,0 +1,22 @@
+<h1  align="center">🤵‍♂️USER DASHBOARD🤵‍♂️</h1>
+    <table border="2" align="center">
+        <th colspan="5">TASK TABLE</th>
+<tr>
+    <th>ID</th>
+    <th>TASK</th>
+    <th>STATUS</th>
+    <th>UPDATE TASK</th>
+    <th>UPDATE USER</th>
+</tr>
+<% result.forEach(function(task_data){ %>
+        
+    <tr>
+        <td><%= task_data.t_id %></td>
+        <td><%= task_data.task %></td>
+        <td><% if(task_data.status==0) { %> pending <% } if(task_data.status==1) { %> Running <% } if(task_data.status==2) { %> Complited <% } if(task_data.status==3) { %> Decline <% } %></td>  
+        <td><a href="/update_task/<%= task_data.t_id %>"  style="text-decoration: none; border: 2px solid violet; background-color: blanchedalmond; font-size: medium; color: black; ">UPDATE TASK</a></td>
+        <td><a href="/manage_user/<%= task_data.u_id %>"  style="text-decoration: none; border: 2px solid violet; background-color: blanchedalmond; font-size: medium; color: black;">UPDATE USER</a></td>
+    </tr>
+<% }) %>
+
+</table>

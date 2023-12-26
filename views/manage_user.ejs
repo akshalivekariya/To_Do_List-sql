@@ -1,0 +1,22 @@
+<h1 align="center">🤵‍♂️ MANAGE USER 🤵‍♂️</h1>
+<form method="post">
+    <table align="center">
+        <% result.forEach(function(user){ %>
+        <tr>
+                    <td>USER NAME:</td>
+                    <td><input type="text" name="name" value="<%= user.name %>" id=""></td>
+        </tr>
+        <tr>
+            <td>USER EMAIL:</td>
+            <td><input type="email" name="email" value="<%= user.email %>" id="" ></td>
+        </tr>
+        <tr>
+            <td>PASSWORD:</td>
+            <td><input type="password" name="password"  value="<%= user.password %>" id=""></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="UPDATE"  style="text-decoration: none; border: 2px solid violet; background-color: blanchedalmond; font-size: medium; padding: 5px; color: black; margin-top: 2px; margin-bottom: 2px;"></td>
+        </tr>
+        <% }) %>
+    </table>
+</form>

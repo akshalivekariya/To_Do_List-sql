@@ -1,0 +1,25 @@
+<h1 align="center">✔️UPADTE TASK✔️</h1>
+<form method="post">
+    <table border="2" align="center">
+        <th>Task Detail</th>
+        <tr>
+            <td>
+        <label for="status">STATUS:</label>
+        <% result.forEach(function(task_data){ %>
+            <select name="status">
+                <option value="null" disabled selected>Select User</option>
+                <option value="0" <% if(task_data.status==0) { %> selected <% }%> >pending</option>
+                <option value="1" <% if(task_data.status==1) { %> selected <% }%> >Running</option>
+                <option value="2" <% if(task_data.status==2) { %> selected <% }%> >Completed</option>
+                <option value="3" <% if(task_data.status==3) { %> selected <% }%> >Decline</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <input type="submit" name="submit"  style="text-decoration: none; border: 2px solid violet; background-color: blanchedalmond; font-size: medium; padding: 5px; color: black; margin-top: 2px; margin-bottom: 2px;"/>
+            <% }) %>
+        </td>
+    </tr>
+    </table>
+</form>
